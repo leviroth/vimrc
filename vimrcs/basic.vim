@@ -131,6 +131,10 @@ set novisualbell
 set t_vb=
 set tm=500
 
+if has("gui_running")
+    autocmd GUIEnter * set vb t_vb=
+endif
+
 " Add a bit extra margin to the left
 set foldcolumn=1
 
@@ -432,3 +436,6 @@ endfunction
 if has("autocmd")
    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+:cd ~
+set number
