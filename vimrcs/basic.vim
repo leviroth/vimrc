@@ -198,6 +198,8 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+inoremap # X#
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -425,5 +427,4 @@ if has("autocmd")
    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-:cd ~
 set number

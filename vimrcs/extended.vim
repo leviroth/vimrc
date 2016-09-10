@@ -34,7 +34,7 @@ set guioptions-=l
 set guioptions-=L
 
 " Colorscheme
-set background=dark
+" set background=dark
 colorscheme zenburn
 
 

@@ -143,7 +143,8 @@ let g:go_fmt_command = "goimports"
 " => Syntastic (syntax checker)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python
-let g:syntastic_python_checkers=['pyflakes']
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_args = ' --ignore=E121,E123,E126,E226,E24,E704,F40'
 
 " Javascript
 let g:syntastic_javascript_checkers = ['jshint']
@@ -151,6 +152,9 @@ let g:syntastic_javascript_checkers = ['jshint']
 " Go
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+
+" C++
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 " Custom CoffeeScript SyntasticCheck
 func! SyntasticCheckCoffeescript()
